@@ -1,0 +1,13 @@
+<mapper namespace="CategoryMapper">
+
+    <!-- 카테고리별 게시글 개수 조회 -->
+    <select id="getPostCountByCategory" resultType="HashMap">
+    <![CDATA[
+      SELECT c.name AS category_name, COUNT(p.id) AS post_count
+      FROM categories c
+      LEFT JOIN posts p ON p.category_id = c.id
+      GROUP BY c.name
+    ]]>
+  </select>
+
+</mapper>

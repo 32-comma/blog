@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "- git scm\r - editor : vscode\r - backend : node.js (express)\r - front : reaact.js\r - database : mariaDB",
+  "homepage": "https://github.com/32-comma/blog#readme",
+  "bugs": {
+    "url": "https://github.com/32-comma/blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/32-comma/blog.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node config/server.js",
+    "dev": "nodemon config/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mariadb": "^3.4.0",
+    "mybatis-mapper": "^0.8.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

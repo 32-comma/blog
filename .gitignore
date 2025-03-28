@@ -1,0 +1,65 @@
+.env
+
+# Node.js 관련 파일 및 폴더
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 빌드 파일
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vercel/
+.netlify/
+
+# 환경설정 파일 (보안 중요)
+.env
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Express (백엔드)
+logs/
+*.log
+logs/*.log
+logs/**/*.log
+tmp/
+coverage/
+
+# React (프론트엔드)
+.vscode/
+.idea/
+.DS_Store
+*.iml
+*.ipr
+*.iws
+
+# MariaDB 관련
+*.sql
+*.sqlite
+*.db
+*.sql.gz
+dump.rdb
+dump.sql
+
+# OS 및 에디터 관련
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+*.swn
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<mapper namespace="PostMapper">
+    <!-- 카테고리별 게시글 가져오기 -->
+    <select id="getPostsByCategory" resultType="map">
+        SELECT 
+            c.name AS category, 
+            p.title AS title, 
+            p.content AS content, 
+            p.created_at AS createdAt
+        FROM posts p
+        JOIN categories c ON p.category_id = c.id
+        ORDER BY c.name, p.created_at DESC;
+    </select>
+
+    <!-- 특정 카테고리 게시글 가져오기 -->
+    <select id="getPostsByCategoryName" parameterType="string" resultType="map">
+        SELECT 
+            p.id AS postId, 
+            p.title AS title, 
+            p.content AS content, 
+            p.created_at AS createdAt
+        FROM posts p
+        JOIN categories c ON p.category_id = c.id
+        WHERE c.name = #{categoryName};
+    </select>
+
+    <!-- 카테고리별 게시글 개수 조회 -->
+    <select id="getPostCountByCategory" resultType="map">
+        SELECT 
+            c.name AS category, 
+            COUNT(p.id) AS postCount
+        FROM categories c
+        LEFT JOIN posts p ON c.id = p.category_id
+        GROUP BY c.id;
+    </select>
+</mapper>

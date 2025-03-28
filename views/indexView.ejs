@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category and Post Count</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Optional CSS -->
+</head>
+
+<body>
+    <header>
+        <h1>Category List</h1>
+    </header>
+
+    <!-- Display Category Names and Post Counts -->
+    <section>
+        <h2>Categories</h2>
+        <ul>
+            <% categories.forEach(category=> { %>
+                <li>
+                    <a href="/category/<%= category.category_name %>">
+                        <%= category.category_name %> (<%= category.post_count %> posts)
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Blog</p>
+    </footer>
+</body>
+
+</html>
